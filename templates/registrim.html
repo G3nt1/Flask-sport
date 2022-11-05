@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Register</h1>
+<table class="table table-primary table-striped">
+        <thead>
+            <tr>
+                <tr>
+                <th>Name</th>
+                <th>Sport</th>
+                <th>Delete</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for x in registrim %}
+                <tr>
+                    <td>{{ x.name }}</td>
+                    <td>{{ x.sport }}</td>
+
+                    <td><form action="/registrim/{{ x.id }}" method="POST">
+                <input type="submit" class="btn btn-primary" value="Delete">
+            </form></td>
+                </tr>
+            {% endfor %}
+
+
+
+        </tbody>
+</table>
+
+
+{% endblock %}

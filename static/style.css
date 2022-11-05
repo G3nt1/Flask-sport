@@ -1,0 +1,14 @@
+body {
+    background-image: url("/static/wallpapertip_sports-wallpapers_1030483.jpg");
+    padding: 100px 350px 350px;
+    margin: auto;
+    color: greenyellow;
+
+}
+thead {
+    color: darkblue;
+}
+form {
+    margin: 100px;
+
+}

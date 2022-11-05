@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% block style %}
+
+{% endblock %}
+                                <h1>Register</h1>
+    <form action="/registrim" method="POST">
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">Name</span>
+            <input type="text" name="name" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="sport">
+            <option disabled selected>Sport</option>
+           {% for sport in sports %}
+                <option>{{sport}}</option>
+           {% endfor %}
+            <input type="submit" class="btn btn-primary" value="Register">
+        </select>
+     </form>
+{% endblock %}
+
